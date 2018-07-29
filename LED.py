@@ -9,6 +9,7 @@ GPIO_LED_BLUE   = 11
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(GPIO_LED_BLUE, GPIO.OUT,initial = GPIO.HIGH)
 GPIO.setup(GPIO_LED_RED, GPIO.OUT,initial = GPIO.HIGH)
+GPIO.setup(GPIO_LED_GREEN, GPIO.OUT,initial = GPIO.HIGH)
 
 # loop through 10 times, on/off for 1 second
 for i in range(10):
