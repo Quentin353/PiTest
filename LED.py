@@ -4,9 +4,9 @@ import time
 
 GPIO.setwarnings(False)
 
-GPIO_LED_GREEN  = 35
+GPIO_LED_GREEN  = 29
 GPIO_LED_RED    = 11
-GPIO_LED_BLUE   = 37
+GPIO_LED_BLUE   = 40
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(GPIO_LED_BLUE, GPIO.OUT,initial = GPIO.HIGH)
