@@ -2,7 +2,8 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.cleanup()
+GPIO.setwarnings(False)
+
 
 GPIO_LED_GREEN  = 35
 GPIO_LED_RED    = 11
