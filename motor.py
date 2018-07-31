@@ -4,6 +4,7 @@ from time import sleep
 #test synchro automatique 
  
 GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
  
 #moteur 1
 Motor1A = 16
