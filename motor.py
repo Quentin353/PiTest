@@ -9,6 +9,8 @@ Motor1A = 16
 Motor1B = 18
 Motor1E = 22
 LED_VErt = 7
+
+sleep(2)
  
 GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
