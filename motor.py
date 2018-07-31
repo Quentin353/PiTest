@@ -50,7 +50,7 @@ try:
             
 except KeyboardInterrupt:
     print("CTRL-C: Terminating program.")
-finally:
+
     
 
 print "Turning motor on"
