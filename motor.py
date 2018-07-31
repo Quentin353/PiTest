@@ -17,7 +17,7 @@ Motor2E = 15
 
 #servo motor 
 servo_pin = 29
-duty_cycle = 4
+duty_cycle = 3
 
 LED_VErt = 7
 GPIO.setup(LED_VErt,GPIO.OUT)
