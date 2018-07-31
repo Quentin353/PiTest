@@ -18,8 +18,8 @@ Motor2E = 15
 
 #servo motor 
 servo_pin = 29
-MIN_DUTY = 5
-MAX_DUTY = 12
+MIN_DUTY = 4
+MAX_DUTY = 13
 CENTRE = MIN_DUTY + (MAX_DUTY - MIN_DUTY) / 2
 duty_cycle = CENTRE
 
