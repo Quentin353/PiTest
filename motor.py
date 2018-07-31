@@ -15,6 +15,10 @@ Motor2A = 11
 Motor2B = 40
 Motor2E = 15
 
+#servo motor 
+servo_pin = 29
+duty_cycle = 7.5
+
 LED_VErt = 7
 GPIO.setup(LED_VErt,GPIO.OUT)
 
@@ -32,7 +36,23 @@ GPIO.setup(LED_VErt,GPIO.OUT)
 GPIO.setup(Motor2A,GPIO.OUT)
 GPIO.setup(Motor2B,GPIO.OUT)
 GPIO.setup(Motor2E,GPIO.OUT)
- 
+
+GPIO.setup(servo_pin, GPIO.OUT)
+
+# Create PWM channel on the servo pin with a frequency of 50Hz
+pwm_servo = GPIO.PWM(servo_pin, 50)
+pwm_servo.start(duty_cycle)
+
+try:
+    while True:
+        duty_cycle = float(input("Enter Duty Cycle (Left = 5 to Right = 10):"))
+        pwm_servo.ChangeDutyCycle(duty_cycle)
+            
+except KeyboardInterrupt:
+    print("CTRL-C: Terminating program.")
+finally:
+    
+
 print "Turning motor on"
 GPIO.output(LED_VErt,GPIO.HIGH)
 GPIO.output(Motor1A,GPIO.HIGH)
