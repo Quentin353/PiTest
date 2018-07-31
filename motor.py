@@ -21,11 +21,11 @@ GPIO.output(Motor1A,GPIO.HIGH)
 GPIO.output(Motor1B,GPIO.LOW)
 GPIO.output(Motor1E,GPIO.HIGH)
  
-sleep(2)
+sleep(10)
  
 print "Stopping motor"
 GPIO.output(Motor1E,GPIO.LOW)
-GPIO.output(LED_VErt,GPIO.LOW)
+#GPIO.output(LED_VErt,GPIO.LOW)
 
  
 GPIO.cleanup()
