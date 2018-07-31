@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-#test synchro automatique
+#test synchro automatique 
  
 GPIO.setmode(GPIO.BOARD)
  
@@ -21,11 +21,11 @@ GPIO.output(Motor1A,GPIO.HIGH)
 GPIO.output(Motor1B,GPIO.LOW)
 GPIO.output(Motor1E,GPIO.HIGH)
  
-sleep(10)
+sleep(2)
  
 print "Stopping motor"
 GPIO.output(Motor1E,GPIO.LOW)
-#GPIO.output(LED_VErt,GPIO.LOW)
+GPIO.output(LED_VErt,GPIO.LOW)
 
  
 GPIO.cleanup()
