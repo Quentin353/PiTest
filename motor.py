@@ -17,7 +17,10 @@ Motor2E = 15
 
 #servo motor 
 servo_pin = 29
-duty_cycle = 12
+MIN_DUTY = 3
+MAX_DUTY = 12
+CENTRE = MIN_DUTY + (MAX_DUTY - MIN_DUTY) / 2
+duty_cycle = CENTRE
 
 LED_VErt = 7
 GPIO.setup(LED_VErt,GPIO.OUT)
@@ -45,8 +48,14 @@ pwm_servo.start(duty_cycle)
 
 try:
     while True:
-        duty_cycle = float(input("Enter Duty Cycle (Left = 5 to Right = 10):"))
-        pwm_servo.ChangeDutyCycle(duty_cycle)
+        pwm_servo.ChangeDutyCycle(MIN_DUTY)
+        time.sleep(0.5)
+        pwm_servo.ChangeDutyCycle(CENTRE)
+        time.sleep(0.5)
+        pwm_servo.ChangeDutyCycle(MAX_DUTY)
+        time.sleep(0.5)
+        pwm_servo.ChangeDutyCycle(CENTRE)
+        time.sleep(0.5)
             
 except KeyboardInterrupt:
     print("CTRL-C: Terminating program.")
